@@ -7,6 +7,9 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+app.get('/', (req, res) => {
+    res.send('Endpoint is working!');
+});
 
 app.get('/api/classify', async (req, res) => {
     try {
